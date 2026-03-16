@@ -1,0 +1,213 @@
+/* DJ Card Styles */
+.dj-card {
+  display: block;
+  background: #111;
+  padding: 2rem;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.6s ease-out backwards;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.dj-card:hover {
+  background: #151515;
+  border-color: #ff3d00;
+  transform: translateY(-8px);
+}
+
+.dj-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dj-symbol {
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.dj-card:hover .dj-symbol {
+  color: #ff3d00;
+}
+
+.dj-index {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  opacity: 0.2;
+}
+
+.dj-name {
+  font-family: 'VT323', monospace;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.dj-card:hover .dj-name {
+  color: #ff3d00;
+}
+
+.dj-role {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: #ff3d00;
+  opacity: 0.8;
+}
+
+.dj-description {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin: 1.5rem 0;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.dj-card:hover .dj-description {
+  opacity: 0.9;
+}
+
+.dj-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.genre-tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.dj-card:hover .genre-tag {
+  border-color: #ff3d00;
+}
+
+.dj-card-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #ff3d00;
+  transition: width 0.4s ease;
+}
+
+.dj-card:hover .dj-card-line {
+  width: 100%;
+}
+
+/* Compact Card */
+.dj-card-compact {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.dj-card-compact:hover {
+  background: #151515;
+  border-color: #ff3d00;
+}
+
+.compact-symbol {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.dj-card-compact:hover .compact-symbol {
+  color: #ff3d00;
+}
+
+.compact-info {
+  flex: 1;
+}
+
+.compact-name {
+  font-family: 'VT323', monospace;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+.dj-card-compact:hover .compact-name {
+  color: #ff3d00;
+}
+
+.compact-role {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: #ff3d00;
+  opacity: 0.7;
+}
+
+.compact-arrow {
+  font-size: 1.5rem;
+  opacity: 0.3;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .dj-card {
+    padding: 1.5rem;
+  }
+  
+  .dj-card:hover {
+    transform: none;
+  }
+  
+  .dj-name {
+    font-size: 1.5rem;
+  }
+  
+  .dj-description {
+    font-size: 0.8rem;
+  }
+  
+  .dj-symbol {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dj-card {
+    padding: 1.25rem;
+  }
+  
+  .dj-card-header {
+    margin-bottom: 1rem;
+  }
+  
+  .dj-name {
+    font-size: 1.3rem;
+  }
+  
+  .dj-description {
+    margin: 1rem 0;
+  }
+  
+  .dj-genres {
+    margin-top: 1rem;
+  }
+  
+  .genre-tag {
+    font-size: 0.55rem;
+    padding: 0.3rem 0.5rem;
+  }
+}

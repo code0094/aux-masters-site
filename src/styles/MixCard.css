@@ -1,0 +1,173 @@
+/* Mix Card Styles */
+.mix-card {
+  padding: 2rem;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.mix-card:hover {
+  background: #151515;
+  border-color: #ff3d00;
+}
+
+.mix-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.mix-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mix-card-title {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+.mix-card:hover .mix-card-title {
+  color: #ff3d00;
+}
+
+.mix-card-artist {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #ff3d00;
+  opacity: 0.8;
+}
+
+.mix-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.mix-card-duration {
+  font-size: 0.9rem;
+  font-family: 'Space Mono', monospace;
+  opacity: 0.6;
+}
+
+.mix-card-date {
+  font-size: 0.7rem;
+  opacity: 0.4;
+}
+
+.mix-card-description {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.mix-card-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mix-card-genre-tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mix-card-embed {
+  margin-top: 1rem;
+}
+
+.mix-card-embed iframe {
+  border: none;
+  border-radius: 0;
+}
+
+.mix-card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.mix-card-placeholder:hover {
+  opacity: 0.7;
+  border-color: rgba(255, 61, 0, 0.3);
+}
+
+.mix-card-placeholder-icon {
+  color: #ff3d00;
+}
+
+.mix-card-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #ff3d00;
+  transition: width 0.4s ease;
+}
+
+.mix-card:hover .mix-card-line {
+  width: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .mix-card {
+    padding: 1.5rem;
+  }
+  
+  .mix-card-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .mix-card-meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .mix-card-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mix-card {
+    padding: 1.25rem;
+  }
+  
+  .mix-card-title {
+    font-size: 1.2rem;
+  }
+  
+  .mix-card-placeholder {
+    padding: 1.5rem;
+    font-size: 0.7rem;
+  }
+}
