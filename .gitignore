@@ -34,3 +34,9 @@ backend/*.sqlite3
 
 # Claude Code local
 .claude/
+
+# Archives
+*.rar
+
+# Stray screenshots
+contact-result
